@@ -18,10 +18,6 @@ This released code supports pre-training, fine-tuning, and evaluation of the mod
     * [Training](#training)
     * [Inference](#inference)
     * [Pretraining and Finetuning](#pretraining-and-finetuning)
-    * [Evaluation and Codalab Submission](#evaluation-and-codalab-submission)
-    * [Train Moment-DETR on your own dataset](#train-moment-detr-on-your-own-dataset)
-* [Demo: Run predictions on your own videos and queries](#run-predictions-on-your-own-videos-and-queries)
-* [Acknowledgement](#acknowledgement)
 * [LICENSE](#license)
 
 
