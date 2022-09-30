@@ -108,5 +108,5 @@ Following is the description of the different fields in the JSON file:
 * `relevant windows`: Start and end times of that particular moment in the video in seconds.
 
 ## LICENSE
-The annotation files are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license, see [./data/LICENSE](data/LICENSE). All the code are under [MIT](https://opensource.org/licenses/MIT) license, see [LICENSE](./LICENSE).
+All the code are under [MIT](https://opensource.org/licenses/MIT) license, see [LICENSE](./LICENSE).
  
