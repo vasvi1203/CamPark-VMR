@@ -1,0 +1,30 @@
+{% extends "main_ui/base.html" %} 
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="content-section col-md-6 mx-auto" style="border: 2px solid #0a2642; border-radius: 15px; margin-top: 190px; font-family: 'Poppins', sans-serif;">
+    <form method="POST" enctype="multipart/form-data" class="dropzone">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-3 text-center" style="padding: 10px;"><strong>Query <i class="fas fa-question-circle"></i> Input</strong></legend>
+            <div style="border: solid 2px #0a2642; padding: 20px; border-radius: 15px;">
+                {{ form|crispy }}
+            </div>
+        </fieldset>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-upload fa-lg"></i></button>
+        </div>
+    </form>
+</div>
+<div class="container" style="font-family: 'Poppins', sans-serif;">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="alert alert-warning text-center font-weight-bold">
+                <h1 style="text-align: center; color: black;" class="font-weight-bold">Uploaded Video</h1>
+            </div>
+            <video id="myVideo" style="outline: none; background-color: black; border: 1px solid white; border-radius: 15px;" width="540" height="360" controls preload="auto">
+                <source src="{{ video.videoFile.url }}" type="video/mp4" >
+            </video>
+        </div>
+    </div>
+</div>
+{% endblock content %}

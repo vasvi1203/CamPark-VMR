@@ -1,0 +1,31 @@
+{% extends "main_ui/base.html" %} 
+{% block content %}
+
+<div class="text-center" style="font-family: 'Poppins', sans-serif;">
+    <a class="btn btn-warning mb-3 font-weight-bold" href="{% url 'main-home' %}">Try for another Video</a>
+</div>
+<div style="font-size: 20px; font-family: 'Poppins', sans-serif;" class="alert alert-info text-center font-weight-bold">
+    Query: "{{ query }}"
+</div>
+<div class="container" style="font-family: 'Poppins', sans-serif;">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            {% if start_pred == 0 and end_pred == 0 %}
+                <div class="alert alert-warning text-center font-weight-bold">
+                    <h1 style="text-align: center; color: black;" class="font-weight-bold">No suitable prediction found!</h1>
+                </div>
+            {% else %}
+                <div class="alert alert-warning text-center font-weight-bold">
+                    <h1 style="text-align: center; color: black;" class="font-weight-bold">Output</h1>
+                    <h3 style="text-align: center; color: black;" class="font-weight-bold">Prediction: {{start_pred}}s to {{end_pred}}s</h3>
+                </div>
+                <video id="myVideo" style="outline: none; background-color: black; border: 1px solid white; border-radius: 15px;" width="540" height="360" controls preload="auto">
+                    <source src="{{ video }}" type="video/mp4" >
+                </video>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
